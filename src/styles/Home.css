@@ -101,6 +101,13 @@
 
 /* Queries */
 
+@media (max-width:650px){
+  .Home-Level{
+    min-height:16rem !important; 
+    max-height: 16rem !important;
+  }
+}
+
 @media (max-width:1000px){
   .Home-Card-Div{
     grid-template-columns: 1fr;
@@ -112,8 +119,8 @@
   }
   
   .Home-Level{
-    min-height:18rem;
-    max-height:18rem;
+    min-height:20rem;
+    max-height:20rem;
     min-width:80vw;
     text-align: center;
   }
