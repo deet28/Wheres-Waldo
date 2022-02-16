@@ -9,7 +9,7 @@ export default function Nav() {
           <Link className = "Nav-Button"to = "/Home">
           <li>Home</li>
           </Link>
-          <Link className = "Nav-Button"to = "/Leaderboard">
+          <Link className = "Nav-Button Leaderboard-Button"to = "/Leaderboard">
           <li>Leaderboard</li>
           </Link>
         </ul>

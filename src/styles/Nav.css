@@ -10,12 +10,16 @@
   color: white;
 }
 
+.Nav-Main :last-child{
+  margin-right:0.1rem;
+}
+
+
 .Nav-Button-List{
   display:flex;
   flex-direction: row;
   list-style-type:none;
-  grid-gap:10px;
-  margin-right:2rem;
+  grid-gap:7px;
 }
 .Nav-Button-List li{
   border:transparent;
@@ -56,5 +60,27 @@
     font-size: 0.9rem;
     line-height:2rem;
     margin-right:0rem;
+  }
+}
+
+@media (max-width:500px){
+  .Nav-Main{
+    justify-content: space-between;
+    line-height: 2rem;
+  }
+  .Nav-Header{
+    font-size:1.5rem;
+  }
+  .Nav-Button-List{
+    margin-top:1.5rem;
+  }
+  .Nav-Button-List li{
+    height:2rem;
+    width:5rem;
+    font-size: 0.8rem;
+    line-height:2rem;
+  }
+  .Leaderboard-Button{
+    display: none;
   }
 }
