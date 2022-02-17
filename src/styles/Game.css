@@ -1,0 +1,57 @@
+.Game-Board-Wrapper{
+  margin-top:10vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center
+}
+
+.Game-Board-Relative{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Game-Board-Image{
+  width:95%;
+}
+
+.Game-Board-Menu{
+  position:absolute;
+  min-height:2rem;
+  min-width:8rem;
+  border-radius: 5px;
+  background-color: lightcoral;
+  color:white;
+}
+
+.Game-Selection-Button{
+  height:2rem;
+  width:6rem;
+  font-size:1.3rem;
+  font-weight: bolder;
+  border:transparent;
+  border-radius: 5px;
+  position:absolute;
+  background-color: rgb(57, 107, 172);
+  width:100%;
+  color:white;
+} 
+
+.Game-Selection-Button:hover{
+  cursor:pointer;
+  background-color:rgb(50, 132, 240);
+}
+
+.Hidden{
+  display:none;
+}
+
+@media(min-width:750px){
+  .Game-Board-Image{
+    padding-bottom:5rem;
+  }
+  
+}
