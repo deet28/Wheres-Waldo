@@ -1,25 +1,52 @@
 import React from 'react'
+import { useState } from 'react';
 import Timer from '../Timer';
+import { Link } from 'react-router-dom';
 import Waldo from '../../media/levels/waldo.jpg';
-
+import { getFirebaseConfig } from '../../firebase';
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore,
+  collection,
+  doc,
+  setDoc
+} from "firebase/firestore"
 
 export default function Level1() {
-  
+  //firebase stuff
+  const firebaseAppConfig = getFirebaseConfig();
+  const app = initializeApp(firebaseAppConfig);
+  const db = getFirestore(app);
+  //firebase stuff
+
+  //clock for pop up modal
+  const [clock,setClock] = useState(0);
+  //clock for pop up modal
+
   let selectMenu;
 
   function selectLocation(){
+    let submitModal = document.querySelector('.Game-Submit-Modal');
+    let gameImage = document.querySelector('.Game-Board-Image');
     let stopTime = document.querySelector('.Stop-Time');
     selectMenu = document.querySelector('.Game-Board-Menu');
+    
     let x = parseInt(selectMenu.style.left);
     let y = parseInt(selectMenu.style.top);
-    console.log(x);
-    console.log(y);
+    
     if ((x >15 && x < 25) && (y > 15 && y < 25)){
       stopTime.click();
-      selectMenu.classList.add('Hidden')
+
+      let time = getTime();
+      setClock(time);
+
+      gameImage.classList.add('Hidden');
+      selectMenu.classList.add('Hidden');
+      submitModal.classList.remove('Hidden');
     } 
     selectMenu.classList.add('Hidden')
   }
+
   function getCoords (e){
     selectMenu = document.querySelector('.Game-Board-Menu');
     let x = (e.nativeEvent.offsetX / e.nativeEvent.target.offsetWidth) * 100;
@@ -31,10 +58,41 @@ export default function Level1() {
       x:xCoord,
       y:yCoord
     };
-    console.log(coords);
     selectMenu.classList.remove('Hidden');
     selectMenu.style.left = `${xCoord}%`;
     selectMenu.style.top = `${yCoord}%`;
+  }
+
+  function getTime(){
+      let minuteDiv = document.querySelector('.Timer-Minutes');
+      let secondDiv = document.querySelector('.Timer-Seconds');
+      let milisecondDiv = document.querySelector('.Timer-Miliseconds');
+      let minutes = minuteDiv.textContent;
+      let seconds = secondDiv.textContent;
+      let miliseconds = milisecondDiv.textContent;
+      let finalTime = `${minutes}${seconds}${miliseconds}`
+      
+      console.log(finalTime);
+      return finalTime;
+  }
+
+  async function pushToFirebase(){
+    
+    let nameInput = document.querySelector('.Game-Submit-Name');
+    let name = nameInput.value;
+    let time = getTime();
+try {
+  const payload = {
+    name:name,
+    time:time
+  }
+  await setDoc(doc(db,"Level1",name),payload);
+} catch (error){
+  console.log('Error adding to Level 1 Leaderboard',error);
+}
+    
+    
+    //whatever firebase function here.
   }
   return (
     <div className = "Game-Board-Wrapper">
@@ -46,6 +104,14 @@ export default function Level1() {
             <div className = "Game-Board-Menu Hidden">
               <button className = "Game-Selection-Button" onClick = {selectLocation}>Here!</button>
             </div>
+            <div className = "Game-Submit-Modal Hidden">
+              <h2>You found him in {clock}</h2>
+              <h3>Post your score to the leaderboard?</h3>
+              <input className = "Game-Submit-Name"></input>
+              <Link to = "/Home">
+                <button className = "Game-Submit-Button" onClick = {pushToFirebase}>Submit</button>
+              </Link>
+              </div>
           </div>
         </div>
       </div>

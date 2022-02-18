@@ -8,14 +8,6 @@ import Waldo6 from '../media/levels/waldo6.jpg';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
-  //function test(e){
-  //  let levels = document.querySelectorAll('.Home-Level');
-  //  for(let i = 0; i < levels.length; i++){
-  //    if(e.target !== levels[i]){
-  //      levels[i].classList.add('Level-Hidden');
-  //    }
-  //  }
-  //}
   return (
   <>
     <div className = "Home-Card-Div">

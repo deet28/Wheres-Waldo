@@ -20,9 +20,9 @@ useEffect(()=>{
   return (
     <div className = "Game-Timer">
       <div className = "Game-Timer-Numbers">
-        <span>{("0"+Math.floor(time/60000%60)).slice(-2)}:</span>
-        <span>{("0"+Math.floor(time/1000%60)).slice(-2)}:</span>
-        <span>{("0"+((time/10)%100)).slice(-2)}</span>
+        <span className = "Timer-Minutes">{("0"+Math.floor(time/60000%60)).slice(-2)}:</span>
+        <span className = "Timer-Seconds">{("0"+Math.floor(time/1000%60)).slice(-2)}:</span>
+        <span className = "Timer-Miliseconds">{("0"+((time/10)%100)).slice(-2)}</span>
         <span><button onClick = {() => setRunning(false)} className = "Stop-Time">Test</button></span>
       </div>
     </div>

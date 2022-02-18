@@ -1,3 +1,43 @@
+.Game-Submit-Modal{
+  top:-4rem;
+  min-height:20rem;
+  min-width:75vw;
+  border:1px solid blue;
+  background-color: lightgrey;
+  position:absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.Game-Submit-Modal h3{
+  margin-top:-2rem;
+}
+
+.Game-Submit-Name{
+  font-size: 1.5rem;
+  height:2rem;
+  width:20rem;
+  border:transparent;
+  border-radius: 5px;
+  margin-top:-1rem;
+}
+.Game-Submit-Button{
+  background-color: lightcoral;
+  color:white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  height:2rem;
+  width:10rem;
+  border-radius:5px;
+  border:transparent;
+}
+.Game-Submit-Button:hover{
+  background-color: rgb(223, 115, 115);
+  cursor: pointer;
+
+}
+
 .Game-Board-Time-Div{
   display:grid;
   grid-template-columns: 1fr 1fr; 
