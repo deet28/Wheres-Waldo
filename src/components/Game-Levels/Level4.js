@@ -1,9 +1,9 @@
 import React from 'react'
 import Timer from '../Timer';
-import Waldo from '../../media/levels/waldo.jpg';
+import Waldo4 from '../../media/levels/waldo4.jpg';
 
 
-export default function Level1() {
+export default function Level4() {
   
   let selectMenu;
 
@@ -14,7 +14,7 @@ export default function Level1() {
     let y = parseInt(selectMenu.style.top);
     console.log(x);
     console.log(y);
-    if ((x >15 && x < 25) && (y > 15 && y < 25)){
+    if ((x >80 && x < 90) && (y > 65 && y < 80)){
       stopTime.click();
       selectMenu.classList.add('Hidden')
     } 
@@ -42,7 +42,7 @@ export default function Level1() {
         <p className = "Game-Board-Time-Div">Find Waldo! <Timer /></p>
         <div>
           <div className = "Game-Board-Relative">
-            <img className = "Game-Board-Image" src = {Waldo} onClick = {getCoords}></img>
+            <img className = "Game-Board-Image" src = {Waldo4} onClick = {getCoords}></img>
             <div className = "Game-Board-Menu Hidden">
               <button className = "Game-Selection-Button" onClick = {selectLocation}>Here!</button>
             </div>

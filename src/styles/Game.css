@@ -1,5 +1,22 @@
+.Game-Board-Time-Div{
+  display:grid;
+  grid-template-columns: 1fr 1fr; 
+  justify-items: center;
+  font-weight: bold;
+}
+
+.Game-Timer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Game-Timer-Numbers{
+  color:rgb(32, 124, 178)
+}
+
 .Game-Board-Wrapper{
-  margin-top:10vh;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -54,4 +71,9 @@
     padding-bottom:5rem;
   }
   
+}
+
+
+.Stop-Time{
+  display:none;
 }

@@ -26,31 +26,31 @@ export default function Home() {
         </Link>
       </div>
       <div className = "Home-Card">
-        <Link className = "Home-Link" to  = "/Leaderboard">
+        <Link className = "Home-Link" to  = "/Level2">
           <img src = {Waldo2} className = "Home-Level"></img>
           <p className = "Home-Level-Tag">Level 2</p>
         </Link>
       </div>
       <div className = "Home-Card">
-        <Link className = "Home-Link" to  = "/Leaderboard">
+        <Link className = "Home-Link" to  = "/Level3">
           <img src = {Waldo3} className = "Home-Level"></img>
           <p className = "Home-Level-Tag">Level 3</p>
         </Link>
       </div>
       <div className = "Home-Card">
-        <Link className = "Home-Link" to  = "/Leaderboard">
+        <Link className = "Home-Link" to  = "/Level4">
           <img src = {Waldo4} className = "Home-Level"></img>
           <p className = "Home-Level-Tag">Level 4</p>
         </Link>
       </div>
       <div className = "Home-Card">
-        <Link className = "Home-Link" to  = "/Leaderboard">
+        <Link className = "Home-Link" to  = "/Level5">
           <img src = {Waldo5} className = "Home-Level"></img>
           <p className = "Home-Level-Tag">Level 5</p>
         </Link>
       </div>
       <div className = "Home-Card">
-        <Link className = "Home-Link" to  = "/Leaderboard">
+        <Link className = "Home-Link" to  = "/Level6">
           <img src = {Waldo6} className = "Home-Level"></img>
           <p className = "Home-Level-Tag">Level 6</p>
         </Link>
