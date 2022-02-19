@@ -2,6 +2,7 @@
 @import 'Nav.css';
 @import 'Home.css';
 @import 'Game.css';
+@import 'Leaderboard.css';
 
 .App {
   text-align: center;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Timer from '../Timer';
 import { Link } from 'react-router-dom';
 import Waldo from '../../media/levels/waldo.jpg';
@@ -7,7 +8,6 @@ import { getFirebaseConfig } from '../../firebase';
 import { initializeApp } from 'firebase/app'
 import {
   getFirestore,
-  collection,
   doc,
   setDoc
 } from "firebase/firestore"
@@ -81,12 +81,14 @@ export default function Level1() {
     let nameInput = document.querySelector('.Game-Submit-Name');
     let name = nameInput.value;
     let time = getTime();
+    let id = uuidv4();
 try {
   const payload = {
     name:name,
-    time:time
+    time:time,
+    id:id
   }
-  await setDoc(doc(db,"Level1",name),payload);
+  await setDoc(doc(db,"Level1",id),payload);
 } catch (error){
   console.log('Error adding to Level 1 Leaderboard',error);
 }

@@ -1,0 +1,30 @@
+.Leaderboard-Main{
+  min-height:10rem;
+  min-width:10rem;
+  border:1px solid lightcoral;
+}
+
+.Leaderboard-List{
+  display:flex;
+  flex-direction: column;
+}
+
+.Leaderboard-Times{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  text-decoration: none;
+}
+
+.Leaderboard-Name{
+  font-size:1.3rem;
+  font-weight: bold;
+}
+.Leaderboard-Time{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.Leaderboard-Title{
+  text-align:center;
+}
+
