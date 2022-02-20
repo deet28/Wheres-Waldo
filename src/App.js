@@ -10,7 +10,7 @@ import Level3 from './components/Game-Levels/Level3';
 import Level4 from './components/Game-Levels/Level4';
 import Level5 from './components/Game-Levels/Level5';
 import Level6 from './components/Game-Levels/Level6';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
     <BrowserRouter>
       <Nav></Nav>
       <Routes>
+        <Route path="/" element={<Home />}></Route>
         <Route path = "Home" element = {<Home />}></Route>
         <Route path = "Leaderboard" element = {<Leaderboard/>}></Route>
         <Route path = "Level1" element = {<Level1 />}> </Route>
