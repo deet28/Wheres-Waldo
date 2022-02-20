@@ -18,6 +18,7 @@ export default function Leaderboard() {
 
   let array = [];
   let sortedArray;
+
   useEffect(()=>{
     const getData = async(input) => {
       const querySnapshot = await getDocs(collection(db,input));
@@ -29,11 +30,9 @@ export default function Leaderboard() {
         }
         array.push(result)
       })
-      //sortedArray = array.sort((t1,t2)=>parseFloat(t1.time)-parseFloat(t2.time));
       let sortedArray = array.sort((t1,t2)=>
           parseInt(t1.time.split(':').join(''))-
           parseInt(t2.time.split(':').join('')))
-      console.log(sortedArray);
       setLevel(sortedArray);
       setTitle('Level1');
     }
@@ -52,7 +51,10 @@ export default function Leaderboard() {
       }
       array.push(result);
     })
-    setLevel(array);
+    let sortedArray = array.sort((t1,t2)=>
+          parseInt(t1.time.split(':').join(''))-
+          parseInt(t2.time.split(':').join('')))
+    setLevel(sortedArray);
     setTitle(title);
   }
 
@@ -64,6 +66,10 @@ return (
         <div className = "Leaderboard-Levels">
           <button className = "test" onClick = {handleClick}>Level1</button>
           <button className = "test" onClick = {handleClick}>Level2</button>
+          <button className = "test" onClick = {handleClick}>Level3</button>
+          <button className = "test" onClick = {handleClick}>Level4</button>
+          <button className = "test" onClick = {handleClick}>Level5</button>
+          <button className = "test" onClick = {handleClick}>Level6</button>
         </div>
         <h2>{title}</h2>
         <div className = "Leaderboard-List">

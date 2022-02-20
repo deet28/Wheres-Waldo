@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import Timer from '../Timer';
-import { Link } from 'react-router-dom';
 import Waldo from '../../media/levels/waldo.jpg';
 import { getFirebaseConfig } from '../../firebase';
 import { initializeApp } from 'firebase/app'
@@ -54,10 +54,6 @@ export default function Level1() {
 
     let xCoord = Math.round(x);
     let yCoord = Math.round(y);
-    let coords = {
-      x:xCoord,
-      y:yCoord
-    };
     selectMenu.classList.remove('Hidden');
     selectMenu.style.left = `${xCoord}%`;
     selectMenu.style.top = `${yCoord}%`;
@@ -71,8 +67,6 @@ export default function Level1() {
       let seconds = secondDiv.textContent;
       let miliseconds = milisecondDiv.textContent;
       let finalTime = `${minutes}${seconds}${miliseconds}`
-      
-      console.log(finalTime);
       return finalTime;
   }
 
@@ -93,8 +87,6 @@ try {
   console.log('Error adding to Level 1 Leaderboard',error);
 }
     
-    
-    //whatever firebase function here.
   }
   return (
     <div className = "Game-Board-Wrapper">
