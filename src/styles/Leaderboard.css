@@ -18,14 +18,19 @@
 .Leaderboard-Name{
   font-size:1.3rem;
   font-weight: bold;
+  margin-bottom:2.5rem;
 }
 .Leaderboard-Time{
   font-size: 1.3rem;
+  margin-bottom:2.5rem;
   font-weight: bold;
 }
 
 .Leaderboard-Title{
   text-align:center;
+}
+.Leaderboard-Title h1{
+  margin-bottom:1.5rem;
 }
 
 .Leaderboard-Levels{
