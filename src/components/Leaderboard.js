@@ -17,6 +17,7 @@ export default function Leaderboard() {
   const [level, setLevel] = useState([]);
 
   let array = [];
+  let sortedArray;
   useEffect(()=>{
     const getData = async(input) => {
       const querySnapshot = await getDocs(collection(db,input));
@@ -28,7 +29,12 @@ export default function Leaderboard() {
         }
         array.push(result)
       })
-      setLevel(array);
+      //sortedArray = array.sort((t1,t2)=>parseFloat(t1.time)-parseFloat(t2.time));
+      let sortedArray = array.sort((t1,t2)=>
+          parseInt(t1.time.split(':').join(''))-
+          parseInt(t2.time.split(':').join('')))
+      console.log(sortedArray);
+      setLevel(sortedArray);
       setTitle('Level1');
     }
       getData('Level1');
