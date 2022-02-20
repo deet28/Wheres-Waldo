@@ -64,12 +64,12 @@ return (
       <div className = "Leaderboard-Title">
         <h1>Leader Board</h1>
         <div className = "Leaderboard-Levels">
-          <button className = "test" onClick = {handleClick}>Level1</button>
-          <button className = "test" onClick = {handleClick}>Level2</button>
-          <button className = "test" onClick = {handleClick}>Level3</button>
-          <button className = "test" onClick = {handleClick}>Level4</button>
-          <button className = "test" onClick = {handleClick}>Level5</button>
-          <button className = "test" onClick = {handleClick}>Level6</button>
+          <button className = "Leaderboard-Button" onClick = {handleClick}>Level1</button>
+          <button className = "Leaderboard-Button" onClick = {handleClick}>Level2</button>
+          <button className = "Leaderboard-Button" onClick = {handleClick}>Level3</button>
+          <button className = "Leaderboard-Button" onClick = {handleClick}>Level4</button>
+          <button className = "Leaderboard-Button" onClick = {handleClick}>Level5</button>
+          <button className = "Leaderboard-Button" onClick = {handleClick}>Level6</button>
         </div>
         <h2>{title}</h2>
         <div className = "Leaderboard-List">

@@ -37,9 +37,8 @@
   color:inherit;
   text-decoration: none;
 }
-
-.Nav-Button:hover{
-  text-decoration: underline;
+.Nav-Button-List-Item:hover{
+  background-color: rgb(199, 106, 106);;
 }
 
 
@@ -80,7 +79,24 @@
     font-size: 0.8rem;
     line-height:2rem;
   }
-  .Leaderboard-Button{
+  .Nav-Leaderboard-Button{
     display: none;
+  }
+}
+@media(max-width:400px){
+  .Nav-Button-List li{
+    font-size: 0.8rem;
+  }
+}
+
+@media(max-width:350px){
+  .Nav-Button-List{
+    margin-top:1.2rem;
+  }
+  .Nav-Button-List li{
+    height:1.7rem;
+    width:4rem;
+    font-size: 0.7rem;
+    line-height:1.8rem;
   }
 }

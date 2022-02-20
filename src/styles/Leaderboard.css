@@ -28,3 +28,67 @@
   text-align:center;
 }
 
+.Leaderboard-Levels{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Leaderboard-Button{
+  border:transparent;
+  font-size: 1.5rem;
+  background-color: white;
+
+}
+
+.Leaderboard-Button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+@media (max-width:530px){
+  .Leaderboard-Button{
+    border:transparent;
+    font-size: 0.9rem;
+    background-color: white;
+  
+  }
+  .Leaderboard-Name{
+    font-size:1.3rem;
+    font-weight: bold;
+  }
+  .Leaderboard-Time{
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .Leaderboard-Title h1{
+    font-size: 1.9rem;
+  }
+  .Leaderboard-Main h2{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:330px){
+  .Leaderboard-Button{
+    border:transparent;
+    font-size: 0.7rem;
+    background-color: white;
+  
+  }
+  .Leaderboard-Name{
+    font-size:1rem;
+    font-weight: bold;
+  }
+  .Leaderboard-Time{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .Leaderboard-Title h1{
+    font-size: 1.7rem;
+  }
+  .Leaderboard-Main h2{
+    font-size: 1.3rem;
+  }
+}
