@@ -73,6 +73,10 @@ return (
         </div>
         <h2>{title}</h2>
         <div className = "Leaderboard-List">
+          <div className = "Leaderboard-List-Titles">
+            <h2>Name</h2>
+            <h2>Time</h2>
+          </div>
         {level.map((index => (
         <div className = "Leaderboard-Times">
           <p className = "Leaderboard-Name">{index.name}</p>

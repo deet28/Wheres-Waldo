@@ -88,9 +88,9 @@ try {
   await setDoc(doc(db,"Level2",id),payload);
 } catch (error){
   console.log('Error adding to Level 2 Leaderboard',error);
-}
-    
   }
+    
+}
   return (
     <div className = "Game-Board-Wrapper">
       <div>

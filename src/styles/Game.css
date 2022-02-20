@@ -2,7 +2,7 @@
   top:-4rem;
   min-height:20rem;
   min-width:75vw;
-  border:1px solid blue;
+  border:1px solid rgb(120, 120, 223);
   background-color: lightgrey;
   position:absolute;
   display:flex;
@@ -13,7 +13,6 @@
 .Game-Submit-Modal h3{
   margin-top:-2rem;
 }
-
 .Game-Submit-Name{
   font-size: 1.5rem;
   height:2rem;

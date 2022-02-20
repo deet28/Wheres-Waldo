@@ -67,26 +67,26 @@ export default function Level1() {
       let seconds = secondDiv.textContent;
       let miliseconds = milisecondDiv.textContent;
       let finalTime = `${minutes}${seconds}${miliseconds}`
+      
+      console.log(finalTime);
       return finalTime;
   }
 
   async function pushToFirebase(){
-    
     let nameInput = document.querySelector('.Game-Submit-Name');
     let name = nameInput.value;
     let time = getTime();
     let id = uuidv4();
-try {
-  const payload = {
-    name:name,
-    time:time,
-    id:id
-  }
-  await setDoc(doc(db,"Level1",id),payload);
-} catch (error){
-  console.log('Error adding to Level 1 Leaderboard',error);
-}
-    
+  try {
+    const payload = {
+      name:name,
+      time:time,
+      id:id
+    }
+      await setDoc(doc(db,"Level1",id),payload);
+      } catch (error){
+        console.log('Error adding to Level 1 Leaderboard',error);
+    }
   }
   return (
     <div className = "Game-Board-Wrapper">
