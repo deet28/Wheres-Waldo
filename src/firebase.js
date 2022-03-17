@@ -1,6 +1,6 @@
 const config = {
-  apiKey: "AIzaSyBq8u1toTA3Z_vdwT3KPIhrkxCL8U0ZS1I",
-  authDomain: "find-waldo-2e955.firebaseapp.com",
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
   projectId: "find-waldo-2e955",
   storageBucket: "find-waldo-2e955.appspot.com",
   messagingSenderId: "391077041760",
