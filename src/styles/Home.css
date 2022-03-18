@@ -1,11 +1,3 @@
-/*.Home-Card-Div{
-  margin-top:1rem;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}*/
-
 .Home-Card-Div{
   margin-top:1rem;
   display:grid;
@@ -101,7 +93,8 @@
 
 /* Queries */
 
-@media (max-width:650px){
+@media screen and (max-width:650px)
+{
   .Home-Level{
     min-height:14rem !important; 
     max-height: 14rem !important;
@@ -154,7 +147,8 @@
   }
 }
 
-@media (max-width:1000px){
+@media screen and (max-width:1000px)
+{
   .Home-Card-Div{
     grid-template-columns: 1fr;
   }
@@ -173,7 +167,8 @@
   }
 }
 
-@media (min-width:1200px){
+@media screen and (min-width:1200px)
+{
   .Home-Card{
     min-height:auto;
     width:23rem;
@@ -188,7 +183,8 @@
   }
 }
 
-@media (min-width:1400px){
+@media screen and (min-width:1400px)
+{
   .Home-Card{
     height:auto;
     width:25rem;
@@ -202,7 +198,8 @@
     text-align: center;
   }
 }
-@media(min-width:1599px){
+@media screen and (min-width:1599px)
+{
   .Home-Card{
     height:auto;
     width:30rem;
@@ -218,7 +215,8 @@
   }
 }
 
-@media(min-width:1899px){
+@media screen and (min-width:1899px)
+{
   .Home-Card{
     height:auto;
     width:30rem;
@@ -235,7 +233,8 @@
 }
 
 
-@media(min-width:2099px){
+@media screen and (min-width:2099px)
+{
   .Home-Card{
     height:auto;
     width:40rem;
@@ -251,7 +250,8 @@
   }
 }
 
-@media(min-width:2499px){
+@media screen and (min-width:2499px)
+{
   .Home-Card{
     height:auto;
     width:50rem;

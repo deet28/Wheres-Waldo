@@ -65,7 +65,8 @@
 }
 
 
-@media (min-width:530px){
+@media screen and (min-width:530px)
+{
   .Leaderboard-Button{
     border:transparent;
     font-size: 1.3rem !important;
@@ -88,7 +89,8 @@
   }
 }
 
-@media(min-width:330px){
+@media screen and (min-width:330px)
+{
   .Leaderboard-Button{
     border:transparent;
     font-size: 0.9rem;
