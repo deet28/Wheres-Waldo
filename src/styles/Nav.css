@@ -8,6 +8,7 @@
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  max-width: 100vw;
 }
 
 .Nav-Main :last-child{
@@ -22,7 +23,7 @@
   grid-gap:7px;
 }
 .Nav-Button-List li{
-  border:transparent;
+  border:transparent;  
   border-radius:5px;
   background-color: lightcoral;
   font-size:1.1rem;

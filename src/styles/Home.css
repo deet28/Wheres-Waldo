@@ -79,7 +79,7 @@
   height:3.5rem;
   width:14rem;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bolder;
   color:white;
   background-color: lightcoral;
@@ -133,17 +133,10 @@
   
   .Home-Footer-Text{
     color:lightcoral;
-    font-size:1.2rem
+    font-size:0.8rem !important; 
   }
   .Home-Footer-Button{
-    height:2.5rem;
-    width:10rem !important;
-    border-radius: 5px;
-    font-size: 1rem !important;
-    font-weight: bolder;
-    color:white;
-    background-color: lightcoral;
-    border:transparent;
+    font-size: 16px !important;
   }
 }
 
@@ -165,6 +158,17 @@
     max-width: 75vw;
     text-align: center;
   }
+  .Home-Footer-Button{
+    font-size: 18px !important;
+  }
+  .Home-Footer-Text{
+    font-size: 1.2rem !important;
+  }
+}
+@media screen and (min-width:1000px){
+  .Home-Footer-Button{
+    font-size: 18px !important;
+  }
 }
 
 @media screen and (min-width:1200px)
@@ -180,6 +184,9 @@
     max-height:15rem;
     min-width:22rem;
     text-align: center;
+  }
+  .Home-Footer-Button{
+    font-size: 20px !important;
   }
 }
 
@@ -197,6 +204,9 @@
     min-width:25rem;
     text-align: center;
   }
+  .Home-Footer-Button{
+    font-size: 22px !important;
+  }
 }
 @media screen and (min-width:1599px)
 {
@@ -212,6 +222,9 @@
     min-width:30rem;
     min-width:30rem;
     text-align: center;
+  }
+  .Home-Footer-Button{
+    font-size: 24px !important;
   }
 }
 
@@ -229,6 +242,9 @@
     min-width:33rem;
     max-width:33rem;
     text-align: center;
+  }
+  .Home-Footer-Button{
+    font-size: 26px !important;
   }
 }
 

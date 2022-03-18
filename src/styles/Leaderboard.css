@@ -5,9 +5,29 @@
   border:1px solid lightcoral;
 }
 
-.Leaderboard-List{
+.Leaderboard-Levels{
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:2rem;
+  margin-bottom:2rem;
+  max-width:99% !important;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+
+.Leaderboard-Button{
+  border:0.5px solid transparent;
+  font-size: 0.7rem !important;
+  background-color: white;
+  color:gray
+
+}
+
+.Leaderboard-Button:hover{
+  cursor: pointer;
+  color:black;
+  text-decoration: underline;
 }
 
 .Leaderboard-List-Titles{
@@ -23,6 +43,11 @@
   grid-template-columns: 1fr 1fr;
   text-decoration: none;
   border-bottom:1px solid lightgray;
+}
+
+.Leaderboard-List{
+  display:flex;
+  flex-direction: column;
 }
 
 .Leaderboard-Name{
@@ -43,34 +68,11 @@
   margin-bottom:1.5rem;
 }
 
-.Leaderboard-Levels{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top:2rem;
-  margin-bottom:2rem;
-  max-width:99% !important;
-}
-
-.Leaderboard-Button{
-  border:transparent;
-  font-size: 0.7rem !important;
-  background-color: white;
-  color:gray
-
-}
-
-.Leaderboard-Button:hover{
-  cursor: pointer;
-  color:black;
-  text-decoration: underline;
-}
-
 @media screen and (min-width:400px)
 {
   .Leaderboard-Button{
     border:transparent;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     background-color: white;
   
   }
@@ -93,6 +95,9 @@
 
 @media screen and (min-width:530px)
 {
+  .Leaderboard-Levels{
+    justify-content: space-evenly;
+  }
   .Leaderboard-Button{
     border:transparent;
     font-size: 1.3rem !important;
