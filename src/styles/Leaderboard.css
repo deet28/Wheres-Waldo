@@ -1,6 +1,7 @@
 .Leaderboard-Main{
   min-height:10rem;
-  min-width:10rem;
+  min-width:90vw;
+  max-width:100vw;
   border:1px solid lightcoral;
 }
 
@@ -45,10 +46,10 @@
 .Leaderboard-Levels{
   display:flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top:2rem;
   margin-bottom:2rem;
-  max-width:99vw;
+  max-width:99% !important;
 }
 
 .Leaderboard-Button{
@@ -63,6 +64,30 @@
   cursor: pointer;
   color:black;
   text-decoration: underline;
+}
+
+@media screen and (min-width:400px)
+{
+  .Leaderboard-Button{
+    border:transparent;
+    font-size: 0.9rem;
+    background-color: white;
+  
+  }
+  .Leaderboard-Name{
+    font-size:1rem;
+    font-weight: bold;
+  }
+  .Leaderboard-Time{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .Leaderboard-Title h1{
+    font-size: 1.7rem;
+  }
+  .Leaderboard-Main h2{
+    font-size: 1.3rem;
+  }
 }
 
 
@@ -90,26 +115,3 @@
   }
 }
 
-@media screen and (min-width:400px)
-{
-  .Leaderboard-Button{
-    border:transparent;
-    font-size: 0.9rem;
-    background-color: white;
-  
-  }
-  .Leaderboard-Name{
-    font-size:1rem;
-    font-weight: bold;
-  }
-  .Leaderboard-Time{
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  .Leaderboard-Title h1{
-    font-size: 1.7rem;
-  }
-  .Leaderboard-Main h2{
-    font-size: 1.3rem;
-  }
-}
