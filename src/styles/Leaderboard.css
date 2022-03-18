@@ -52,7 +52,7 @@
 
 .Leaderboard-Button{
   border:transparent;
-  font-size: 0.7rem;
+  font-size: 0.7rem !important;
   background-color: white;
   color:gray
 
