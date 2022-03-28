@@ -1,1 +1,1 @@
-An app using React and Firebase to host a series of image searching challenges. 
+An app using React and Firebase to host a series of image searching challenges. User's times are recorded, and the user can choose to post their time to a leaderboard. Leaderboard is populated and retreived via firebase/firestore. 
